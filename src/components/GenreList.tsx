@@ -6,11 +6,10 @@ import {
   List,
   ListItem,
   Spinner,
-  Text,
 } from "@chakra-ui/react";
 import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/imageUrl";
-import { Genre } from "../hooks/useData";
+import { Genre } from "../Interfaces";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
@@ -25,9 +24,11 @@ const GenreList = ({ onSelectGenre, currGenre }: Props) => {
   if (isLoading) return <Spinner />;
   return (
     <>
-      <Heading marginBottom={3} fontSize={"2xl"}>Genres</Heading>
+      <Heading marginBottom={3} fontSize={"2xl"}>
+        Genres
+      </Heading>
       <List>
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
             <HStack>
               <Image
