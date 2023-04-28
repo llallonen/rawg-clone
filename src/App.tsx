@@ -25,13 +25,17 @@ function App() {
       paddingX={5}
     >
       <GridItem area={"nav"}>
-        <NavBar onSearch={(searchText) => setGameQuery({...gameQuery, searchText})}/>
+        <NavBar
+          onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+        />
       </GridItem>
       <Show above="lg">
         <GridItem area={"aside"} paddingRight={5}>
           <GenreList
             currGenreId={gameQuery.genreId}
-            onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genreId: genre.id })}
+            onSelectGenre={(genre) =>
+              setGameQuery({ ...gameQuery, genreId: genre.id })
+            }
           />
         </GridItem>
       </Show>
@@ -46,12 +50,12 @@ function App() {
               }
             />
           </Box>
-            <SortSelector
-              sortOrder={gameQuery.sortOrder}
-              onSelectSortOrder={(sortOrder) =>
-                setGameQuery({ ...gameQuery, sortOrder })
-              }
-            />
+          <SortSelector
+            sortOrder={gameQuery.sortOrder}
+            onSelectSortOrder={(sortOrder) =>
+              setGameQuery({ ...gameQuery, sortOrder })
+            }
+          />
         </Flex>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
