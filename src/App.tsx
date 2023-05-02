@@ -9,8 +9,6 @@ import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
 
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-
   return (
     <Grid
       templateAreas={{ base: `'nav' 'main'`, lg: `'nav nav' 'aside main'` }}
@@ -18,18 +16,11 @@ function App() {
       paddingX={5}
     >
       <GridItem area={"nav"}>
-        <NavBar
-          onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
-        />
+        <NavBar />
       </GridItem>
       <Show above="lg">
         <GridItem area={"aside"} paddingRight={5}>
-          <GenreList
-            currGenreId={gameQuery.genreId}
-            onSelectGenre={(genre) =>
-              setGameQuery({ ...gameQuery, genreId: genre.id })
-            }
-          />
+          <GenreList />
         </GridItem>
       </Show>
       <GridItem area={"main"}>
