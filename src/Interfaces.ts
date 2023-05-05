@@ -40,3 +40,14 @@ export interface Trailer {
   preview: string;
   data: { 480: string; max: string };
 }
+
+export interface Screenshot {
+  id: number;
+  image: string;
+  width: number;
+  height: number;
+  // count: number;
+  // next: string;
+  // previous: string;
+  // results: {}
+}
