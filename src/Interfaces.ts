@@ -7,12 +7,14 @@ export interface Platform {
 export interface Game {
   id: number;
   name: string;
+  genres: Genre[];
   background_image: string;
   parent_platforms: { platform: Platform }[];
   metacritic: number;
   rating_top: number;
   slug: string;
   description_raw: string;
+  publishers: Publisher[];
 }
 
 export interface Genre {
@@ -25,4 +27,9 @@ export interface FetchResponse<T> {
   count: number;
   next: string | null;
   results: T[];
+}
+
+export interface Publisher {
+  id: number;
+  name: string;
 }
