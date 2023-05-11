@@ -5,16 +5,13 @@ import { useGames } from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import GameCardSkeleton from "./GameCardSkeleton";
-import useGameQueryStore from "../store";
 
 const GameGrid = () => {
   const {
     data,
-    error,
     isLoading,
     hasNextPage,
     fetchNextPage,
-    isFetchingNextPage,
   } = useGames();
   const skeletons = [1, 2, 3, 4, 5, 6];
 

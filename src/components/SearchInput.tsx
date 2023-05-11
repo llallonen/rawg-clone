@@ -14,12 +14,12 @@ const SearchInput = () => {
         event.preventDefault();
         if (ref.current) {
           setSearchText(ref.current.value);
-          navigate('/');
+          navigate("/");
         }
       }}
     >
       <InputGroup>
-        <InputLeftElement children={<BsSearch />} />
+        <InputLeftElement>{<BsSearch />} </InputLeftElement>
         <Input ref={ref} borderRadius={20} placeholder="Search games" />
       </InputGroup>
     </form>
