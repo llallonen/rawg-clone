@@ -10,7 +10,7 @@ interface Props {
 }
 
 const GameCard = ({ game }: Props) => {
-  const bg = useColorModeValue('gray.100', 'gray.300')
+  const bg = useColorModeValue('gray.100', 'gray.600')
 
   return (
     <Card bg={bg}>
