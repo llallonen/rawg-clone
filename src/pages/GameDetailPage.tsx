@@ -34,8 +34,6 @@ const GameDetailPage = () => {
       <Box>An error occurred while requesting data</Box>
     )
   }
-
-
 };
 
 export default GameDetailPage;

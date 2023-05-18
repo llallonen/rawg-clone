@@ -8,6 +8,7 @@ import SortSelector from "../components/SortSelector";
 const HomePage = () => {
   return (
     <Grid
+      data-testid='home-page'
       templateAreas={{ base: `'nav' 'main'`, lg: `'nav nav' 'aside main'` }}
       templateColumns={{ base: "1fr", lg: "200px 1fr" }}
       paddingX={5}
